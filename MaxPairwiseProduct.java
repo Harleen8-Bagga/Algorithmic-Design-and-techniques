@@ -1,9 +1,21 @@
 import java.util.*;
 import java.io.*;
 
+
+
+
+/**
+ *
+ * @author Harleen
+ */
+
+
+   
 public class MaxPairwiseProduct {
-    static int getMaxPairwiseProduct(int[] numbers) {
-      int n = numbers.length;
+    
+   static long getMaxPairwiseProduct(long[] numbers) {
+        
+        int n = numbers.length;
         int max_index1 = -1;
         for (int i = 0; i < n; i++)//max_index1 will be updated with the index of maximum number
 	{
@@ -20,14 +32,19 @@ public class MaxPairwiseProduct {
             
         
          return(( long)(numbers[max_index1] * numbers[max_index2]));
-        }
+    }
+    
+   
+       
+
+
 
     public static void main(String[] args) {
-        FastScanner scanner = new FastScanner(System.in);
+    FastScanner scanner = new FastScanner(System.in);
         int n = scanner.nextInt();
-        int[] numbers = new int[n];
+        long[] numbers = new long[n];
         for (int i = 0; i < n; i++) {
-            numbers[i] = scanner.nextInt();
+            numbers[i] = scanner.nextLong();
         }
         System.out.println(getMaxPairwiseProduct(numbers));
     }
@@ -58,6 +75,14 @@ public class MaxPairwiseProduct {
         int nextInt() {
             return Integer.parseInt(next());
         }
+        long nextLong()
+        {
+            return Long.parseLong(next());
+        }
     }
 
 }
+    
+    
+
+
